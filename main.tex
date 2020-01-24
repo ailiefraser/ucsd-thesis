@@ -113,6 +113,8 @@
 \usepackage{scrextend}
 \usepackage{pslatex}
 \usepackage{graphicx}
+\usepackage{fancyhdr} % temp for date in header/footer
+
 
 %% CAPTION
 % This overrides some of the ugliness in ucsd.cls and
@@ -197,7 +199,10 @@
 \usepackage{array}  % Enables "m" tabular environment http://ctan.org/pkg/array
 \usepackage{booktabs}  % Enables \toprule  http://ctan.org/pkg/array
 
-
+%% TEMP for adding date to header
+\pagestyle{fancy}
+\fancyhead[R]{Compiled on \today}
+\fancyhead[L]{}
 
 \begin{document}
 

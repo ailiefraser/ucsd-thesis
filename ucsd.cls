@@ -468,7 +468,7 @@
 %
 {\ssp
 \begin{alwayssingle}
-    \thispagestyle{empty}
+    %\thispagestyle{empty} %TEMP UNCOMMENT FOR FINAL
     \setcounter{page}{1}
 
     \null\vfil
@@ -523,7 +523,7 @@
 % anyway.
 
 \begin{alwayssingle}
-\thispagestyle{empty}
+%\thispagestyle{empty} %TEMP UNCOMMENT FOR FINAL
 \null\vfill\dsp
 \begin{center}
 {\fmfont
@@ -670,7 +670,7 @@ on microfilm and electronically: }}\\
 % page.
 %
 \def\vitapage{\@restonecolfalse\if@twocolumn\@restonecoltrue\onecolumn
-     \else \newpage \fi\pagestyle{preliminary}
+     \else \newpage \fi%\pagestyle{preliminary} %TEMP UNCOMMENT FOR FINAL
      \phantomsection
      \addcontentsline{toc}{frontmatter}{\protect\numberline{}Vita}}
 % Special label for the vita list
@@ -751,8 +751,10 @@ on microfilm and electronically: }}\\
 % Changed def. WBB to go with change in use of frontmatter.
 
 \newenvironment{frontmatter}
-{\pagestyle{preliminary}\pagenumbering{roman}}%
-{\pagestyle{thesis}\pagenumbering{arabic}}
+{%\pagestyle{preliminary} %TEMP UNCOMMENT FOR FINAL
+\pagenumbering{roman}}%
+{%\pagestyle{thesis} %TEMP UNCOMMENT FOR FINAL
+\pagenumbering{arabic}}
 
 
 %    ****************************************
@@ -984,7 +986,7 @@ on microfilm and electronically: }}\\
 % Left in, WBB, but noted; maybe should get rid of this?
 %
 \def\part{\cleardoublepage   % Starts new page.
-   \thispagestyle{plain}%    % Page style of part page is 'plain'
+   %\thispagestyle{plain}%    % Page style of part page is 'plain' %TEMP UNCOMMENT FOR FINAL
   \if@twocolumn              % IF two-column style
      \onecolumn              %  THEN \onecolumn
      \@tempswatrue           %       @tempswa := true
@@ -1018,7 +1020,7 @@ on microfilm and electronically: }}\\
 \def\@endpart{\vfil\newpage   % End page with 1fil glue.
    \if@twoside                % IF twoside printing
        \hbox{}%               %   THEN Produce totally blank page
-       \thispagestyle{empty}%
+       %\thispagestyle{empty}% TEMP UNCOMMENT FOR FINAL
        \newpage
    \fi                        % FI
    \if@tempswa                % IF @tempswa = true
@@ -1301,7 +1303,8 @@ on microfilm and electronically: }}\\
 \columnseprule \z@
 \columnsep 35\p@\twocolumn[\@makeschapterhead{\indexname}]%
     \@mkboth{\uppercase{\indexname}}{\uppercase{\indexname}}%
-    \thispagestyle{plain}\parindent\z@
+    %\thispagestyle{plain} %TEMP UNCOMMENT FOR FINAL
+    \parindent\z@
     \parskip\z@ plus .3\p@\relax\let\item\@idxitem
 \phantomsection
 \addcontentsline{toc}{backmatter}{\indexname}
