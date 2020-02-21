@@ -1,14 +1,15 @@
 \chapter{RePlay: Contextually Presenting Learning Videos Across Software Applications}
-Complex activities often require people to work across multiple software applications. However, people frequently lack valuable knowledge about at least one application, especially as software changes and new software emerges. Existing help systems either lack contextual knowledge or are tightly-knit into a single application. We introduce an application-independent approach for contextually presenting video learning resources and demonstrate it through the RePlay system. RePlay uses accessibility \textsc{api}s to gather context about the user's activity. It leverages an existing search engine to present relevant videos and highlights key segments within them using video captions. We report on a week-long field study ($n\!=\!7$) and a lab study ($n\!=\!24$) showing that contextual assistance helps people spend less time away from their task than web video search and replaces current video navigation strategies. Our findings highlight challenges with representing and using context across applications.
+\label{chapter:replay}
+\begin{quote}
+Complex activities often require people to work across multiple software applications. However, people frequently lack valuable knowledge about at least one application, especially as software changes and new software emerges. These gaps in knowledge often arise while people are in the middle of the task, leading them to search for help. Unfortunately, existing help systems either lack contextual knowledge or are tightly-knit into a single application. We introduce an application-independent approach for contextually presenting video learning resources and demonstrate it through the \textit{RePlay} system. RePlay uses accessibility \textsc{api}s to gather context about the user's activity. It leverages an existing search engine to present relevant videos and highlights key segments within them using video captions. We report on a week-long field study ($n\!=\!7$) and a lab study ($n\!=\!24$) showing that contextual assistance helps people spend less time away from their task than web video search and replaces current video navigation strategies. Our findings highlight challenges with representing and using context across applications.
+\end{quote}
 
-\begin{figure}[t!]
-%\vspace{-0.2in}
+\begin{figure}[b!]
 \centering
-  \includegraphics[width=1\textwidth]{replay/figures/replay-interface.png}
+  \includegraphics[width=0.7\textwidth]{replay/figures/replay-interface.png}
   \caption{RePlay - shown to the right of Zeplin (a) - includes a status area (b) and search field (c) at the top. Video results (d) include timeline markers and caption excerpts to highlight moments relevant to the user's query and context.}
   \label{fig:replay-interface}
 %   \Description[A screenshot of RePlay's interface next to the application Zeplin.]{A screenshot of RePlay's interface next to the application Zeplin. RePlay comprises a status area, a search field, and video results. Timeline markers and caption excerpts overlaid on video results highlight moments relevant to the user's query and context.}
-  \vspace{-0.20in}
 \end{figure}
 
 \input{replay/1_intro}

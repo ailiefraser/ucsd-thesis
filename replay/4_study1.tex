@@ -1,6 +1,29 @@
-\begin{table*}[b]
-%\vspace{-0.1in}
+\section{Study 1: How Does RePlay Support Activities in the Wild?}
+
+A week-long field study with seven participants investigated whether and how people might use contextually-augmented video search in their own work. We focused on visual design, as videos are especially helpful for visual work \cite{Chi2012}.  Participants were recruited from the local design community and a prominent creative software company (\autoref{table:replay_study1_usage}). Participants had mixed amounts of experience with the main design software used during the study (either Sketch or Adobe \textsc{xd}); all participants were proficient in at least one other creative application. Several had recently switched to Adobe \textsc{xd} or Sketch from other software, or had recently started their current job. After an initial interview, we installed RePlay on each participant's computer. Participants kept RePlay open throughout the next week while they worked (one used it for 10 days). Participants returned for a followup interview and received a \$45 gift card as compensation for their time. 
+
+\begin{figure}[b!]
 \centering
+  \includegraphics[width=.6\textwidth]{replay/figures/replay-old.png}
+  \caption{Study 1 used this initial version of RePlay, shown here next to Adobe \textsc{xd}. It did not show video titles or timeline markers; instead it had arrow buttons next to each video to skip between that video's ranked clips. It also added the 3 most recent tools to the search query instead of one. }~\label{fig:replay-old}
+%   \Description[A screenshot of an older version of RePlay.]{A screenshot of an older version of RePlay. Above the search field, the status area reads ``Searching for XD Select, Repeat Grid, Ungroup Grid''. Inside the search field it reads ``Select, Repeat Grid, Ungroup Grid''. It displays a video result with no title and a short caption excerpt underneath that includes the words ``repeat grid'' bolded.}
+\end{figure}
+
+Participants used an initial version of RePlay (\autoref{fig:replay-old}); based on their feedback, we revised it to the version presented in this chapter. Study 1's RePlay did not consider cross-app context; it only used context from the current application. This RePlay only monitored Adobe \textsc{xd} and Sketch to avoid capturing unrelated or private data from other applications. RePlay logged the following events to a server when it was open: all clicks on interface elements in Adobe \textsc{xd} and Sketch, all interactions with RePlay, and all switches to and between other applications.
+
+We took notes on all interviews, noting similar answers to questions and identifying common themes. This data and feedback helped motivate the final version's focus on cross-app support, helped us understand what kinds of tasks RePlay may be most useful for, and highlighted some advantages and challenges of contextual support.
+
+\subsection{Results}
+Over the week, participants reported spending between 1.5 and 30 hours on their design work (\autoref{table:replay_study1_usage}). Some said they kept RePlay open the entire time; others closed it at times to focus on their work. 
+
+Generally, participants appreciated having help readily available. As \textit{P2} explained, \textit{``this gives me an interface where I can search and do everything and it's automatically there right next to the design. There are no extra steps.''} \textit{P4} enjoyed seeing RePlay react to her actions: \textit{``it felt like I had a buddy.''} Only one (\textit{P6}, the expert) did not use it at all: he was fluent in the software and did not seek assistance.
+
+\subsubsection{Contextual clip search was most useful for specific tasks}
+Four participants said they tended to use RePlay when stuck trying to figure out how to do something specific. Three also said they used it to find out what a particular tool could do or how to use it. All but one participant worked on targeted tasks (see \autoref{table:replay_study1_usage}). \textit{P3} wanted general resources for getting started with Sketch, and did not find RePlay helpful.
+
+\begin{table*}[t]
+\centering
+\caption{Study 1 participant background and usage. Participants self-reported their experience, design work done, hours spent designing, and \% of that time with RePlay open. \# queries and \# videos watched were calculated from RePlay's usage data. }~\label{table:replay_study1_usage}
 \resizebox{1\textwidth}{!}{
 \begin{tabular}{lllllcccc}
 \multicolumn{1}{l}{} & \textbf{Job title} & \textbf{Main app} & \textbf{\begin{tabular}[c]{@{}l@{}}Experience\\ w/ app\end{tabular}} & \textbf{Design work done} & \textbf{\begin{tabular}[c]{@{}l@{}}Hours\\ designing\end{tabular}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}Time w/\\ RePlay open\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}\# queries\end{tabular}}} & \multicolumn{1}{l}{\textbf{\begin{tabular}[c]{@{}l@{}}\# videos \\ watched\end{tabular}}} \\
@@ -13,49 +36,11 @@
 \textit{P7}          & Sr. UX Designer       & Adobe \textsc{xd}     & Intermediate  & Wireframing an app UI                                                        & 12                                                                            & 33\%                                                                                            & 19                   & 13\phantom{0}                                                                                       
 \end{tabular}
 }
-\caption{Study 1 participant background and usage. Participants self-reported their experience, design work done, hours spent designing, and \% of that time with RePlay open. \# queries and \# videos watched were calculated from RePlay's usage data. }~\label{table:study1_usage}
-\vspace{-0.2in}
 \end{table*}
-
-
-\section{Study 1: How does RePlay support activities in the wild?}
-
-A week-long field study with seven participants investigated whether and how people might use contextually-augmented video search in their own work. We focused on visual design, as videos are especially helpful for visual work \cite{Chi2012}.  Participants were recruited from the local design community and a prominent creative software company (\autoref{table:study1_usage}). Participants had mixed amounts of experience with the main design software used during the study (either Sketch or Adobe \textsc{xd}); all participants were proficient in at least one other creative application. Several had recently switched to Adobe \textsc{xd} or Sketch from other software, or had recently started their current job. After an initial interview, we installed RePlay on each participant's computer. Participants kept RePlay open throughout the next week while they worked (one used it for 10 days). Participants returned for a followup interview and received a \$45 gift card as compensation for their time. 
-
-Participants used an initial version of RePlay (\autoref{fig:replay-old}); based on their feedback, we revised it to the version presented in this paper. Study 1's RePlay did not consider cross-app context; it only used context from the current application. This RePlay only monitored Adobe \textsc{xd} and Sketch to avoid capturing unrelated or private data from other applications. RePlay logged the following events to a server when it was open: all clicks on interface elements in Adobe \textsc{xd} and Sketch, all interactions with RePlay, and all switches to and between other applications.
-
-We took notes on all interviews, noting similar answers to questions and identifying common themes. This data and feedback helped motivate the final version's focus on cross-app support, helped us understand what kinds of tasks RePlay may be most useful for, and highlighted some advantages and challenges of contextual support.
-
-\subsection{Results}
-Over the week, participants reported spending between 1.5 and 30 hours on their design work (\autoref{table:study1_usage}). Some said they kept RePlay open the entire time; others closed it at times to focus on their work. 
-
-Generally, participants appreciated having help readily available. As \textit{P2} explained, \textit{``this gives me an interface where I can search and do everything and it's automatically there right next to the design. There are no extra steps.''} \textit{P4} enjoyed seeing RePlay react to her actions: \textit{``it felt like I had a buddy.''} Only one (\textit{P6}, the expert) did not use it at all: he was fluent in the software and did not seek assistance.
-
-\begin{figure}[t!]
-\centering
-  \includegraphics[width=\textwidth]{replay/figures/replay-old.png}
-  \caption{Study 1 used this initial version of RePlay, shown here next to Adobe \textsc{xd}. It did not show video titles or timeline markers; instead it had arrow buttons next to each video to skip between that video's ranked clips. It also added the 3 most recent tools to the search query instead of one. }~\label{fig:replay-old}
-%   \Description[A screenshot of an older version of RePlay.]{A screenshot of an older version of RePlay. Above the search field, the status area reads ``Searching for XD Select, Repeat Grid, Ungroup Grid''. Inside the search field it reads ``Select, Repeat Grid, Ungroup Grid''. It displays a video result with no title and a short caption excerpt underneath that includes the words ``repeat grid'' bolded.}
-\vspace{-0.25in}
-\end{figure}
-
-\subsubsection{Contextual clip search was most useful for specific tasks}
-Four participants said they tended to use RePlay when stuck trying to figure out how to do something specific. Three also said they used it to find out what a particular tool could do or how to use it. All but one participant worked on targeted tasks (see \autoref{table:study1_usage}). \textit{P3} wanted general resources for getting started with Sketch, and did not find RePlay helpful.
 
 Three users recounted similar stories of searching for a particular question and quickly finding a clip within a video that answered it. \textit{P1} described searching for ``Make Symbol'' after clicking on the ``Make Symbol'' tool in Adobe \textsc{xd}. The answer he needed came from an auto-selected moment near the end of a 3-hour video. \textit{P1} added, \textit{``if I had searched for that myself I would've given up.''} Similarly, \textit{P5} found what he needed in a 1.5 hour video that was cued to a moment 20 minutes in. He was trying to create margins, and searched for ``layout grid'', and \textit{``The first video in the list showed me exactly what I needed to do''}, which was to check a box he hadn't noticed. \textit{P4} found RePlay useful for indicating that her specific goal was \textit{not} possible: she wanted to customize a grid system in Sketch and searched for ``grid settings'', but the caption excerpts indicated that none of the results mentioned customizing grids.
 
 Contextual video clips sometimes invited opportunistic learning: \textit{P1} and \textit{P7} recounted instances where a video they were watching taught them something they didn't know and hadn't thought to look for. \textit{P1} continued watching the ``make symbols'' video as it described grouping and layering symbols. This part \textit{``wasn't originally what I was searching for but it was exactly what I needed ... [I] gained a lot more knowledge.''} \textit{P7} described how he \textit{``searched for `character styles' and actually found new information that I've never seen before''} about the Libraries panel.
-
-\begin{figure*}[t!]
-\centering
-  \vspace{-0.2in}
-\includegraphics[width=\textwidth]{replay/figures/study2_task.png}
-\vspace{-0.3in}
-  \caption{Study 2 asked participants to make changes to an initial logo in Canva (a), update a prototype in Adobe \textsc{xd} (b), and make a presentation showing their changes in PowerPoint (c).}~\label{fig:replay-study2-task}
-  \vspace{-0.2in}
-%   \Description[Screenshots of the three template files participants were given.]{Screenshots of the three template files participants were given. The first is a blue circle with ``TS'' in the middle, shown in the Canva interface. The second is a wireframe design in Adobe XD with three phone screens, one that says ``Welcome to TravelStories'' with a Start button, one that says ``My TravelStory'' with a grid of photos below it, and one showing a photo at full size. The third is slide in PowerPoint with a screenshot of the wireframe on the right, and some text on the right that lists changes made to the design.}
-
-\end{figure*}
 
 %\vspace{0.1in}
 \subsubsection{Tool context helps, but not in the search query}

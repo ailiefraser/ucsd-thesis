@@ -4,7 +4,7 @@ To understand how feedback is reused in educational settings and evaluate the Cr
 \subsection{DEP 1: How Do Teaching Assistants Reuse Feedback?}
 Eight teaching assistants (TAs) (two female) for an undergraduate design course used Gradescope to grade and critique seven weekly assignments that varied in content from storyboards to written explanations to high-fidelity web application prototypes. TAs set rubric items for each assignment and wrote comments for each. We deployed CritiqueKit to first understand how TAs might reuse feedback and made iterative improvements to the design throughout the quarter based on TA input.
 
-\begin{figure}
+\begin{figure}[b!]
 \centering
   \includegraphics[width=0.6\textwidth]{critiquekit/figures/gradescope.png}
   \caption{CritiqueKit implemented as a browser extension in Gradescope for DEP 1. a) Reviewers provide feedback on a student design. b) The suggestions box under each rubric item provides reviewers with a list of reusable suggestions and a comment box for providing feedback on a submission.}~\label{fig:critiquekit_gradescope}
@@ -23,8 +23,14 @@ An end-of-course survey asked TAs about their CritiqueKit use. One commented tha
 \subsection{DEP 2: How Do Students Reuse Feedback?}
 The first deployment examined teaching staff usage; this second deployment examined student usage to understand how novices interact with guidance and suggestions. We deployed CritiqueKit as a standalone web application with 29 students in an undergraduate design course for five weeks. Students gave anonymous feedback on two randomly assigned peer submissions for each of seven assignments.
 
+\begin{figure}[b!]
+\centering
+  \includegraphics[width=\textwidth]{critiquekit/figures/old_interface.png}
+  \caption[The CritiqueKit user interface for DEP 2 and EXP 1.]{The CritiqueKit user interface for DEP 2 and EXP 1. a) The reviewer types their feedback into the text box. b) Checkboxes in the guidance panel update as the reviewer types to show how well the comment fulfills high-quality feedback criteria. c) The reviewer can browse and reuse previously given feedback.}~\label{fig:critiquekit_exp1}
+\end{figure}
+
 \subsubsection{Method: Integrating Interactive Guidance for Scaffolding}
-Novice students are less experienced in giving feedback and may benefit from interactive scaffolding [33]. This version of CritiqueKit included an interactive guidance panel to help reviewers provide more specific and actionable feedback (\autoref{fig:critiquekit_exp1}). The categories on the guidance panel were ``Is Positive,'' ``Is Specific,'' ``Identifies a Problem,'' and ``Presents a Solution'' with checkboxes next to each. These categories stem from recommendations in the literature for both positive and critical feedback [18]. Similar to the final version of CritiqueKit, these checkboxes updated as a reviewer typed by classifying their comment into the three categories. The categories differed from the final version, focusing on specific and actionable feedback. 
+Novice students are less experienced in giving feedback and may benefit from interactive scaffolding \cite{Reiser2004}. This version of CritiqueKit included an interactive guidance panel to help reviewers provide more specific and actionable feedback (\autoref{fig:critiquekit_exp1}). The categories on the guidance panel were ``Is Positive,'' ``Is Specific,'' ``Identifies a Problem,'' and ``Presents a Solution'' with checkboxes next to each. These categories stem from recommendations in the literature for both positive and critical feedback \cite{Kelley2013}. Similar to the final version of CritiqueKit, these checkboxes updated as a reviewer typed by classifying their comment into the three categories. The categories differed from the final version, focusing on specific and actionable feedback. 
 
 The suggestions box was seeded with feedback from the course TA. Similar to the first deployment, the suggestions were categorized in the Positive, Problem, and Solution categories. When a student submitted a comment, it was classified into one of these categories, shortened to 25 words if it was longer, and fed back into the corpus to appear as a suggestion, enabling students to reuse their peers' as well as their own comments. The suggestions were ordered first by frequency used, then by shortest length first, and updated as these values changed and more comments were added. Compared to the final version of CritiqueKit, suggestions were static, meaning they did not change as the reviewer typed.
 

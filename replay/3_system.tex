@@ -2,19 +2,17 @@
 This section describes RePlay's user interface, context detection, and system architecture.
 %RePlay is a desktop application that allows users to search for contextually-relevant video clips for any accessibility-enabled desktop application. It leverages large online video corpora, searching video caption text for relevant moments. The RePlay prototype investigates the efficacy and challenges of cross-app contextual search.
 
-\begin{figure}[b!]
-\centering
-\vspace{-0.2in}
-  \includegraphics[width=\textwidth]{replay/figures/green_markers.png}
-  \caption{RePlay overlays green markers on the video timeline to indicate moments where the captions match a user's search term. Mousing over a marker shows a pop-up with an excerpt from the captions at that moment; clicking it plays the video from that moment. }~\label{fig:replay-green_markers}
-%   \Description[A screenshot showing green markers overlaid on a video result in RePlay.]{A screenshot showing green markers overlaid on a video result in RePlay. The user has searched for ``add images to grid'' in Adobe XD, and the top video result is titled ``Learn how to quickly add images in Adobe XD''. The video timeline has green dots on it, and the mouse is hovering over one. A pop-up shows a caption excerpt that says: ``...spacing all the images are going to line...'' with the word ``images'' bolded.}
-  \vspace{-0.2in}
-\end{figure}
-
-\subsection{User interface}
+\subsection{User Interface}
 The RePlay panel (\autoref{fig:replay-interface}) can be positioned and sized as desired; its default size is 465px \texttimes 1055px. It is designed to fit next to the user's primary applications to minimize switching windows. The narrow pane makes videos small but easier to browse and watch in context. The interface comprises a status area, search field, and video results.
 
 The status area updates as the user works, displaying the name of the last tool clicked and the current application (\autoref{fig:replay-status}). ``Tools'' refer to interface elements or commands within an application. The status area provides awareness of what context RePlay will use for search (\textit{i.e.,} so the user does not need to include the application name in their search query). When the user initiates a search, the status area updates to show the query (\autoref{fig:replay-interface}b).
+
+\begin{figure}[b!]
+\centering
+  \includegraphics[width=0.6\textwidth]{replay/figures/replay_status.png}
+  \caption{RePlay's status area displays tool names after they are clicked and adds them to the search field. }~\label{fig:replay-status}
+%   \Description[A screenshot of RePlay's status area.]{A screenshot of RePlay's status area. It reads, ``you clicked Repeat Grid'', and has the tool name ``Repeat Grid'' included in the search field.}
+\end{figure}
 
 As the user works, the search field updates with the name of the last tool clicked (\autoref{fig:replay-status}). Users can edit or delete it to form their own query. Pressing the \textsc{go} button or return key triggers a search. RePlay displays the top five resulting videos, each cued to start at a relevant moment. A two-line excerpt from that moment's caption appears below the video with query words highlighted in bold \cite{Hearst2009Book}.
 
@@ -22,25 +20,19 @@ Often, videos have multiple moments that may be relevant. RePlay renders green m
 
 \begin{figure}[b!]
 \centering
-\vspace{-0.2in}
-  \includegraphics[width=\textwidth]{replay/figures/replay_status.png}
-  \caption{RePlay's status area displays tool names after they are clicked and adds them to the search field. }~\label{fig:replay-status}
-%   \Description[A screenshot of RePlay's status area.]{A screenshot of RePlay's status area. It reads, ``you clicked Repeat Grid'', and has the tool name ``Repeat Grid'' included in the search field.}
-  \vspace{-0.2in}
+  \includegraphics[width=0.6\textwidth]{replay/figures/green_markers.png}
+  \caption{RePlay overlays green markers on the video timeline to indicate moments where the captions match a user's search term. Mousing over a marker shows a pop-up with an excerpt from the captions at that moment; clicking it plays the video from that moment. }~\label{fig:replay-green_markers}
+%   \Description[A screenshot showing green markers overlaid on a video result in RePlay.]{A screenshot showing green markers overlaid on a video result in RePlay. The user has searched for ``add images to grid'' in Adobe XD, and the top video result is titled ``Learn how to quickly add images in Adobe XD''. The video timeline has green dots on it, and the mouse is hovering over one. A pop-up shows a caption excerpt that says: ``...spacing all the images are going to line...'' with the word ``images'' bolded.}
 \end{figure}
 
+\begin{figure}[t!]
+\centering
+  \includegraphics[width=0.6\textwidth]{replay/figures/context_cues.png}
+  \caption[RePlay displays contextual cues based on recent app and tool use. a) RePlay lists the three most recent apps that the video mentions. b) Grey markers indicate mentions of recently-used tools. Mousing over a marker shows a caption excerpt; clicking a marker plays the video.]{RePlay displays contextual cues based on recent app and tool use. a) RePlay lists the three most recent apps that the video mentions. b) Grey markers indicate mentions of recently-used tools. In this example, the user recently used the ``text'' tool in Canva. Mousing over a marker shows a caption excerpt; clicking a marker plays the video. }~\label{fig:replay-context_cues}
+%   \Description[A screenshot showing grey markers overlaid on a video result in RePlay.]{A screenshot showing grey markers overlaid on a video result in RePlay. The user has searched for ``how to export slides'' in Canva, and the top video result is titled ``How to create a canva presentation with PowerPoint''. The video timeline has grey dots on it, and the mouse is hovering over one. A pop-up shows a caption excerpt that says: ``...great I'm going to leave the text as it...'' with the word ``text'' italicized.}
+\end{figure}
 
 RePlay also displays contextual cues \cite{Ekstrand2011} on search results (\autoref{fig:replay-context_cues}). For each video, RePlay lists the three most-recently used applications that are mentioned in the video (\autoref{fig:replay-context_cues}a). This list is especially useful when users move between applications and want videos that mention both the current and recent applications. RePlay renders grey timeline markers to indicate moments where recently used tools are mentioned (\autoref{fig:replay-context_cues}b). Caption pop-ups italicize tool names.
-
-
-\begin{figure}[b!]
-\centering
-\vspace{-0.2in}
-  \includegraphics[width=\textwidth]{replay/figures/context_cues.png}
-  \caption{RePlay displays contextual cues based on recent app and tool use. a) RePlay lists the three most recent apps that the video mentions. b) Grey markers indicate mentions of recently-used tools. In this example, the user recently used the ``text'' tool in Canva. Mousing over a marker shows a caption excerpt; clicking a marker plays the video. }~\label{fig:replay-context_cues}
-%   \Description[A screenshot showing grey markers overlaid on a video result in RePlay.]{A screenshot showing grey markers overlaid on a video result in RePlay. The user has searched for ``how to export slides'' in Canva, and the top video result is titled ``How to create a canva presentation with PowerPoint''. The video timeline has grey dots on it, and the mouse is hovering over one. A pop-up shows a caption excerpt that says: ``...great I'm going to leave the text as it...'' with the word ``text'' italicized.}
-  \vspace{-0.2in}
-\end{figure}
 
 RePlay's panel shows all results at the same time, allowing users to quickly skim multiple videos, and browse other results while one video plays. This ability to ``see inside'' multiple resources from a single page increases foraging efficiency \cite{Vermette2017, Glassman2016DocMatrix, Pavel2013}. 
 
@@ -48,7 +40,7 @@ Clicking the full-screen button in a video's bottom-right corner opens the video
 
 When the user switches to a new application and clicks a tool, RePlay automatically searches for the application name. This seeds the panel with app-relevant videos that give users a starting point.
 
-\subsection{Detecting application context}
+\subsection{Detecting Application Context}
 RePlay uses contextual information to augment a user's query and search within video results. The motivation for context-augmented search is to increase relevance, especially when users don't know what to ask for. However, if not done well, adding terms has the opposite effect: excluding relevant results and/or presenting irrelevant ones \cite{Finkelstein2002}. We tried several heuristics with RePlay; the current implementation includes the three most recent applications and tools.
 
 \subsubsection{How to detect context?}
@@ -59,20 +51,18 @@ Extracting accessibility text obviates the need for hard-coded knowledge about s
 
 In Mac\-OS, RePlay can always extract the application name and menu items. Buttons and other interface elements have accessibility labels in many applications (\textit{e.g.,} Adobe \textsc{xd}, Microsoft Office, iMovie, Tableau, Sketch), but not in others (often long-existing software, \textit{e.g.,} Photoshop). Applications differ in which accessibility fields they support and what information is in what field. For example, tool names may be in the \textit{Title}, \textit{Help}, \textit{Description}, or \textit{Value} attribute. RePlay checks all four, preferring them in that order. RePlay also gathers accessibility information for websites, as long as browser accessibility access is enabled. It is by default in Safari, and as an option in Chrome. Many sites implement accessibility labels (\textit{e.g., } Canva, Wordpress, Sketchpad, Snappa, G Suite). Those that do not still include some information by default (\textit{e.g.}, text area contents via the \textit{Value} attribute). RePlay infers website names from the \textsc{url} and website title.
 
-\subsection{Video search \& ranking}
-RePlay leverages existing online video search engines to retrieve video results. It then finds and ranks relevant clips within these videos (\autoref{fig:replay-system}). RePlay's architecture requires no prior understanding of the applications or videos; it relies on captions for clip extraction and ranking. Video authors often talk about things they are doing and provide tips about tools; captions thus provide narrative information beyond the visual content in the video that can be useful for learners.
-
 \begin{figure}[b!]
 \centering
-\vspace{-0.2in}
-  \includegraphics[width=\textwidth]{replay/figures/replay-system.png}
+  \includegraphics[width=0.8\textwidth]{replay/figures/replay-system.png}
   \caption{RePlay uses accessibility \textsc{api}s to detect user context, which it uses to augment the user's query and to search and rank videos. RePlay finds matching clips by searching video captions for the user's query and recent tool names. }~\label{fig:replay-system}
 %   \Description[A diagram showing the different components of RePlay and how they communicate.]{A diagram showing the different components of RePlay and how they communicate. The MacOS Accessibility API detects user behavior from desktop software and sends this to RePlay. RePlay searches videos using the YouTube Data API. RePlay finds clips in these videos and displays them in the user interface.}
-  \vspace{-0.2in}
 \end{figure}
 
+\subsection{Video Search \& Ranking}
+RePlay leverages existing online video search engines to retrieve video results. It then finds and ranks relevant clips within these videos (\autoref{fig:replay-system}). RePlay's architecture requires no prior understanding of the applications or videos; it relies on captions for clip extraction and ranking. Video authors often talk about things they are doing and provide tips about tools; captions thus provide narrative information beyond the visual content in the video that can be useful for learners.
+
 \subsubsection{Available data}
-RePlay's current video corpus comprises all English videos on YouTube that have a caption track. Most do: YouTube auto-generates captions by default. We used YouTube for its popularity and captions; any video search engine with an \textsc{api} could be used. For example, Vimeo (\url{vimeo.com}) and Dailymotion (\url{dailymotion.com}) also provide \textsc{api} access to videos and captions.
+RePlay's current video corpus comprises all English videos on YouTube that have a caption track. Most do: YouTube auto-generates captions by default. We used YouTube for its popularity and captions; any video search engine with an \textsc{api} could be used. For example, Vimeo (\href{https://vimeo.com}{\nolinkurl{vimeo.com}}) and Dailymotion (\href{https://dailymotion.com}{\nolinkurl{dailymotion.com}}) also provide \textsc{api} access to videos and captions.
 
 \subsubsection{Searching}
 Video search requires more steps than document search, because captions are obtained separately. This two-step search means that issuing multiple queries with context terms added (such as tool usage) like prior work \cite{Ekstrand2011} would be too slow. To speed responses, RePlay constructs and issues a single query concatenating the current application's name with the user's query. Leaving context terms out of the query also ensures that the user-provided search terms are not ``washed out''. RePlay queries YouTube and selects its top five video results that have English captions and mention the current application in any of the title, description, or captions (to avoid results that may contain other keywords but do not pertain to the current application).

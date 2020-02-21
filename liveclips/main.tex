@@ -28,17 +28,13 @@
 % % option again before submitting your final document.
 % \usepackage{todonotes}
 
-\chapter{LiveClips: Contextual recommendation of inspirational clips from live-streamed videos}
-
-\begin{figure}[b!]
-\centering
-  \includegraphics[width=\textwidth]{liveclips/figures/all_interfaces.png}
-  \caption{Three interface prototypes demonstrate how video clips taken from creative live-streams can be embedded in a software tool as inspirational examples, implemented here in Adobe Photoshop. a) Contextual tooltips: When hovering over a tool icon, clips of that tool being used are shown. b) On-demand search: Pressing Photoshop's search button or Ctrl-F brings up an extended search interface with task-level clip examples. c) Ambient side panel: an always-visible panel updates periodically with clip examples based on the user's recent tool use. }~\label{fig:liveclips_photoshop}
-\end{figure}
-
-
-Getting inspiration through examples is a key part of the creative process. While one popular source for examples of creative work is online communities like Behance and Dribbble, there is a growing interest in seeing the process behind artists' work, not just the final product. An increasingly popular way to share one's creative process is live-streaming. Live-streamed videos are a rich and rapidly growing source of inspirational content, but their length and volume makes them hard to search or browse. We introduce RePlay: a system for automatically selecting interesting segments from live-streamed videos and recommending them to users in the context of their creative workflow, providing access to relevant examples in the moment. We present three methods for recommending and displaying video clips with varying levels of contextual support, and implement them in a popular creative application, Adobe Photoshop. We compare the accuracy of RePlay's clip ranking to human ranking and present initial user feedback on the three prototypes.
-
+\chapter{LiveClips: Contextual Recommendation of Inspirational Clips from Live Streamed Videos}
+\label{chapter:liveclips}
+\begin{quote}
+Tutorials are helpful for accomplishing specific goals, but people do not always have a particular outcome in mind when using creative software -- sometimes users seek resources for general learning or inspiration. One such resource is live streamed videos, where artists share a window into their creative process. This chapter explores the benefits and challenges of using such videos for learning and inspiration.
+%Through content analysis of live stream archives, interviews with 8 streamers, and online surveys with 165 viewers, we study current practices and challenges in creative live stream communities and compare them with prior observations of live streaming in other domains. We observed four common types of creative live streams: teaching, making, socializing, and performing. 
+We find that despite the wealth of expert knowledge in live stream archives, their length and volume makes them hard to search or browse. To address this challenge, we introduce \textit{LiveClips}: a system for automatically selecting inspirational segments from live streamed videos and recommending them to users in the context of their creative workflow. We present three methods for recommending and displaying video clips with varying levels of contextual support, and implement them in a popular creative application, Adobe Photoshop. We compare the accuracy of LiveClips' clip ranking to human ranking and present initial user feedback on the three prototypes.
+\end{quote}
 
 \input{liveclips/1_intro}
 \input{liveclips/2_relatedwork}

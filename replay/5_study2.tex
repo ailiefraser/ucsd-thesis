@@ -1,9 +1,19 @@
-\section{Study 2: How does RePlay compare to current methods for video assistance?}
+\section{Study 2: How Does RePlay Compare to Current Methods for Video Assistance?}
+\label{sec:replay_study}
 
 A between-subjects study ($n\!=\!24$) investigated how contextual assistance for multi-app activities might affect behavior compared to standard web video search. It found that contextual assistance can reduce time spent searching and navigating videos.
 
-\subsection{Study procedure}
-Participants were asked to imagine that they were designers working for a client developing a travel journal mobile app. To replicate a multi-app activity, the study task spanned three applications: Canva (\url{canva.com}), Adobe \textsc{xd}, and Microsoft PowerPoint. Participants were asked to improve and change an initial design for their client (\autoref{fig:replay-study2-task}). The task had both creative and technical requirements. Creative requirements included making the logo more travel-themed, adding visual appeal to the prototype welcome screen, and making a PowerPoint presentation to show to the client. Technical requirements included adding additional photos to a grid, rounding their corners, and recording a video walkthrough. If participants needed help, they were instructed to search for tutorial videos using either RePlay or YouTube in a web browser. RePlay participants were introduced to its features prior to the task. To ensure that all participants had access to the same resources, they were asked not to use other search engines or resources. Participants had 45 minutes to complete the task, and answered questions about their experience and help-seeking at the end. Participants were compensated with a \$15 gift card.
+\subsection{Study Procedure}
+
+\begin{figure*}[b!]
+\centering
+\includegraphics[width=\textwidth]{replay/figures/study2_task.png}
+  \caption{Study 2 asked participants to make changes to an initial logo in Canva (a), update a prototype in Adobe \textsc{xd} (b), and make a presentation showing their changes in PowerPoint (c).}~\label{fig:replay-study2-task}
+%   \Description[Screenshots of the three template files participants were given.]{Screenshots of the three template files participants were given. The first is a blue circle with ``TS'' in the middle, shown in the Canva interface. The second is a wireframe design in Adobe XD with three phone screens, one that says ``Welcome to TravelStories'' with a Start button, one that says ``My TravelStory'' with a grid of photos below it, and one showing a photo at full size. The third is slide in PowerPoint with a screenshot of the wireframe on the right, and some text on the right that lists changes made to the design.}
+
+\end{figure*}
+
+Participants were asked to imagine that they were designers working for a client developing a travel journal mobile app. To replicate a multi-app activity, the study task spanned three applications: Canva (\href{https://canva.com}{\nolinkurl{canva.com}}), Adobe \textsc{xd}, and Microsoft PowerPoint. Participants were asked to improve and change an initial design for their client (\autoref{fig:replay-study2-task}). The task had both creative and technical requirements. Creative requirements included making the logo more travel-themed, adding visual appeal to the prototype welcome screen, and making a PowerPoint presentation to show to the client. Technical requirements included adding additional photos to a grid, rounding their corners, and recording a video walkthrough. If participants needed help, they were instructed to search for tutorial videos using either RePlay or YouTube in a web browser. RePlay participants were introduced to its features prior to the task. To ensure that all participants had access to the same resources, they were asked not to use other search engines or resources. Participants had 45 minutes to complete the task, and answered questions about their experience and help-seeking at the end. Participants were compensated with a \$15 gift card.
 
 \subsubsection{Participants}
 Twenty four participants (14 female) were recruited through online and paper advertisements on a university campus. Prior to the study, participants filled out a survey about their design experience. Participants were randomly assigned to either the RePlay ($n\!=\!12$) or Web ($n\!=\!12$) condition and counterbalanced based on experience. ``Novice'' was defined as completing at most two courses in design and reporting experience with at most two design applications. ``Experienced'' was defined as completing more than two courses in design or reporting experience with more than two design applications. Six of the 24 participants were ``experienced''. 
@@ -21,9 +31,8 @@ Participants varied considerably in the amount of time and effort they spent. Th
 \begin{figure}[b!]
 \centering
 %\vspace{-0.25in}
-  \includegraphics[width=1\textwidth]{replay/figures/study2_graphs.png}
+  \includegraphics[width=.8\textwidth]{replay/figures/study2_graphs.png}
   \caption{RePlay participants spent marginally less time overall in the search interface than Web participants ($p\!=\!.07$, left) and significantly less time \textit{per query} ($p\!=\!.02$, right).}~\label{fig:replay-study2-graphs}
-  \vspace{-0.2in}
 %   \Description[Two graphs showing the difference between RePlay and Web participants in time spent in the search interface.]{Two box plots showing the difference between RePlay and Web participants in time spent in the search interface. On the left, RePlay's box is slightly lower than Web's for total time in search (seconds). On the right, RePlay's box is significantly lower than Web's for time in search by query per person (seconds).}
 \end{figure}
 
@@ -45,17 +54,16 @@ Easier navigation both within and between video results may explain why RePlay p
 As in Study 1, participants removed tool names from queries. No participants in either condition used tool names. Instead, participants wrote action-oriented queries: the most common were ``crop photos'', ``round corners'', and ``record video.'' Despite RePlay adding the current tool name to the search field, in all instances but one, participants deleted the tool name from their query.
 
 \begin{table}[t]
-%\vspace{-0.35in}
+\centering
+\caption{Average helpfulness ratings for RePlay's contextual features ($n\!=\!12$). Most participants found the timeline markers most helpful for determining which videos to watch.}~\label{table:replay_study2_features}
 \begin{tabular}{lllll}
 \textit{RePlay Feature} & Title                   & Thumbnail               & Caption                 & Timeline                \\ 
 \textit{Helpfulness}    & \multicolumn{1}{c}{2.8} & \multicolumn{1}{c}{3.1} & \multicolumn{1}{c}{2.5} & \multicolumn{1}{c}{4.2}
 \end{tabular}
-\caption{Average helpfulness ratings for RePlay's contextual features ($n\!=\!12$). Most participants found the timeline markers most helpful for determining which videos to watch.}~\label{table:study2_replayfeatures}
-\vspace{-0.3in}
 \end{table}
 
 \subsubsection{Intra-video context is most helpful}
-In interviews, participants rated timeline markers as the most helpful (4.2/5) (\autoref{table:study2_replayfeatures}). RePlay participants hovered over timeline markers a total of 69 times and clicked on markers 22 times. One participant mentioned that timeline markers provide a \textit{``scaffold of what to look for and where to start watching.''} Participants rated caption excerpt and video title as less helpful. A few participants mentioned ignoring titles and excerpts in favor of timeline markers and video thumbnails. Twice in each condition, participants selected the first video result even though the title mentioned the wrong application (Photoshop or Illustrator). This suggests that the video region is a strong magnet for people's attention.
+In interviews, participants rated timeline markers as the most helpful (4.2/5) (\autoref{table:replay_study2_features}). RePlay participants hovered over timeline markers a total of 69 times and clicked on markers 22 times. One participant mentioned that timeline markers provide a \textit{``scaffold of what to look for and where to start watching.''} Participants rated caption excerpt and video title as less helpful. A few participants mentioned ignoring titles and excerpts in favor of timeline markers and video thumbnails. Twice in each condition, participants selected the first video result even though the title mentioned the wrong application (Photoshop or Illustrator). This suggests that the video region is a strong magnet for people's attention.
 
 
 %Tasks that require a context switch are perceived to take longer than tasks that don't. 

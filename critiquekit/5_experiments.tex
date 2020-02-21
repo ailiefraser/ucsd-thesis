@@ -2,18 +2,12 @@
 Following our deployments, we conducted two empirical studies to investigate the impact of suggestions and guidance on feedback quality.
 
 \subsection{EXP 1: Do Static Suggestions Improve Feedback?}
-In an online between-subjects study, 40 undergraduate design students were asked to review three restaurant website homepages using CritiqueKit. The task emulated peer review tasks often required in creative courses. This study's suggestion corpus came from a design feedback task on CrowdCrit [25] and was categorized in the Positive, Problem, and Solution categories. We hypothesized that suggestions and guidance would help reviewers provide more specific and actionable comments.
-
-\begin{figure}
-\centering
-  \includegraphics[width=\textwidth]{critiquekit/figures/old_interface.png}
-  \caption{The CritiqueKit user interface for EXP 1. a) The reviewer types their feedback into the text box. b) Checkboxes in the guidance panel update as the reviewer types to show how well the comment fulfills high-quality feedback criteria. c) The reviewer can browse and reuse previously given feedback.}~\label{fig:critiquekit_exp1}
-\end{figure}
+In an online between-subjects study, 40 undergraduate design students were asked to review three restaurant website homepages using CritiqueKit. The task emulated peer review tasks often required in creative courses. This study's suggestion corpus came from a design feedback task on CrowdCrit \cite{Luther2015} and was categorized in the Positive, Problem, and Solution categories. We hypothesized that suggestions and guidance would help reviewers provide more specific and actionable comments.
 
 \subsubsection{Method: Reviewing Restaurant Websites}
 40 participants were randomly assigned to either the CritiqueKit condition or the Control condition (20 in each). CritiqueKit participants used the same version of CritiqueKit as DEP 2 with all features available (\autoref{fig:critiquekit_exp1}). Control participants used an otherwise identical version consisting solely of a comment text box. Upon landing on the homepage of either version, participants were provided with a scenario explaining that three restaurant owners are seeking feedback on their new website design. Participants were given a brief tutorial of CritiqueKit's features and an explanation of what makes for good feedback. There were no restrictions or requirements on time spent or amount of feedback to provide. We compared the percentages of comments in five categories. Comments including a supportive element were labeled as \textit{Positive Only} or \textit{Positive + Specific}. Comments including a critical element were labeled \textit{Problem Only}, \textit{Solution Only}, or \textit{Problem + Solution}.
 
-\begin{figure}
+\begin{figure}[b!]
 \centering
   \includegraphics[width=0.6\textwidth]{critiquekit/figures/exp1_feedbacktypes.png}
   \caption{A plurality of feedback in both conditions in EXP 1 identified both a problem and solution (\textit{i.e.}, was actionable). Feedback that was only positive was the rarest. There were no significant differences between conditions for these categories.}~\label{fig:critiquekit_exp1_results}
@@ -29,7 +23,7 @@ The distribution of the five category types did not vary significantly between c
 65\% of CritiqueKit participants actively used the guidance panel, making a total of 85 corrections to categories. Interaction with the guidance panel may have indicated attention to the feedback characteristics. As the study was online, we don't know how many of the other 35\% were influenced by the guidance panel. 
 
 \subsubsection{Unfortunately, People also Reused Vague Suggestions}
-11 distinct suggestions from the corpus were reused. 8 of these were vague; 3 were specific. 15 of 155 reviews included a reused suggestion. This seems especially low given the high engagement with the guidance panel. We see two reasons for this: First, the suggestions came from CrowdCrit [25], where participants provided feedback on a weather app design. The study task was different than the task for which the suggested feedback was originally given, and novices may have had a limited ability to see the deep structure behind a suggestion and reapply it in a new context. Second, the suggestions were created by crowd workers and of uneven quality. 
+11 distinct suggestions from the corpus were reused. 8 of these were vague; 3 were specific. 15 of 155 reviews included a reused suggestion. This seems especially low given the high engagement with the guidance panel. We see two reasons for this: First, the suggestions came from CrowdCrit \cite{Luther2015}, where participants provided feedback on a weather app design. The study task was different than the task for which the suggested feedback was originally given, and novices may have had a limited ability to see the deep structure behind a suggestion and reapply it in a new context. Second, the suggestions were created by crowd workers and of uneven quality. 
 
 The suggestions selected were typically short, positive comments, perhaps because students did not know how to apply them in the specific context. For example, the most commonly reused suggestion was ``great use of color'' (reused 3 times). This result is similar to DEP2 in which students did not find feedback provided by other peers or novices to be useful and generalizable. Feedback suggestions may require more curation or quality control to be most useful. 
 
@@ -52,16 +46,16 @@ The categories on the guidance panel and their definition used for coding partic
 
 For DEP 2 and EXP 1, the guidance panel categories sought to encourage specific and actionable feedback (\autoref{fig:critiquekit_exp1}). Examining the feedback from our previous studies, we found that ``Is Positive'' and ``Identifies a Problem'' did not provide significant guidance as reviewers were generally aware of whether their feedback was positive or critical. In addition, the guidance panel did not explicitly check for justification of feedback. For EXP 2, we revised the categories to ``Is Specific,'' ``Is Actionable,'' and ``Is Justified'' to also encourage the explanation or reasoning behind feedback. As described in the system section, the checkboxes update as the reviewer types to reflect the categories present in their comment, and the suggestions adapt to show feedback examples from categories not yet present in the comment. 
 
-\begin{figure}
-\centering
-  \includegraphics[width=0.6\textwidth]{critiquekit/figures/venn_diagram_exp2.png}
-  \caption{In a controlled experiment, a significantly higher percentage of feedback in the CritiqueKit condition (53\% versus 30\%) contained three attributes of good feedback: Specific, Actionable, and Justified.}~\label{fig:critiquekit_exp2}
-\end{figure}
-
 \subsubsection{Results: CritiqueKit Participants Provided More Specific, Actionable, \& Justified Feedback}
 Participants provided 158 total comments (79 control, 79 CritiqueKit). The percentage of comments that contained all three categories (specific, actionable, and justified) was significantly higher in the CritiqueKit condition (53\%) than in Control (30\%) ($x^2=8.33, df = 1, p = .01$) (\autoref{fig:critiquekit_exp2}). As an example, this comment meets all three: ``The `more questionnaires' section (Specific) should be made smaller (Actionable) because it is not the main focus of the page.'' (Justified). The system's heuristic for checking specificity of a comment was quite simple: five words or greater in length. Feedback raters blind to each condition used a more sophisticated and holistic assessment, taking specific to also mean related to the review criteria. With this assessment, 98\% of CritiqueKit comments were labeled by raters as specific whereas only 83\% of Control comments were. These raters also rated comments from EXP 1 within the specific, actionable, and justified categories to provide a comparison between the two experiments. Interestingly, the percentage of comments containing all attributes in the Control condition was relatively consistent between EXP 1 (35\%) and EXP 2 (30\%). The percentage of comments with all attributes in the CritiqueKit condition greatly increased between the two experiments (26\% versus 53\%). Having the checkboxes may have explicitly reminded CritiqueKit participants to ensure their comments satisfy the specific, actionable, and justified categories.
 
-\begin{figure}
+\begin{figure}[b!]
+\centering
+  \includegraphics[width=0.6\textwidth]{critiquekit/figures/venn_diagram_exp2.png}
+  \caption{In EXP 2, a significantly higher percentage of feedback in the CritiqueKit condition (53\% versus 30\%) contained three attributes of good feedback: Specific, Actionable, and Justified.}~\label{fig:critiquekit_exp2}
+\end{figure}
+
+\begin{figure}[b!]
 \centering
   \includegraphics[width=0.6\textwidth]{critiquekit/figures/exp2_bar.png}
   \caption{CritiqueKit participants provided more \textit{specific} and \textit{all-three} category ideas than control participants.}~\label{fig:critiquekit_exp2_bar}

@@ -29,7 +29,7 @@ and randomly selected 50 archived English livestream videos. Four annotators (in
 
 \begin{table}[b]
 \centering
-\resizebox{1\columnwidth}{!}{
+\caption{Summary of popularity of Twitch's creative livestream categories. The number of currently-live streams and currently-watching viewers were collected 4 times a day for a week and then averaged.}~\label{table:livestream_summary}
 \begin{tabular}{llll}
 \textbf{Category}        & \textbf{\begin{tabular}[c]{@{}l@{}}Avg. \#\\ livestreams\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Avg. \# live\\ viewers\end{tabular}} & \textbf{\begin{tabular}[c]{@{}l@{}}Avg. \# viewers\\ / stream\end{tabular}} \\
 Art                      & 339                                                                    & 6417                                                                    & 21                                                                          \\
@@ -39,21 +39,17 @@ Makers \& Crafting       & 40                                                   
 Music \& Performing Arts & 286                                                                    & 6881                                                                    & 24                                                                          \\
 Science \& Technology    & 91                                                                     & 1155                                                                    & 12                                                                         
 \end{tabular}
-}
-\caption{Summary of popularity of Twitch's creative livestream categories. The number of currently-live streams and currently-watching viewers were collected 4 times a day for a week and then averaged.}~\label{table:summary}
-\vspace{-0.15in}
 \end{table}
 
 While this sample does not capture all types of creative activities one might livestream, our hope is that by analyzing a set of canonically creative activities we can shed light on a broader set of activities that might also have a creative component (\textit{e.g., } video games that involve creating artifacts).
 %There is overlap among categories on Twitch, even sometimes within a single livestream when an artist switches back and forth between creative work and other activities like gaming. 
 
 \subsubsection{Results: Most streamers focus on work \& engage with viewers}
-\autoref{table:summary} shows overall metrics for the creative categories on Twitch. The most popular categories by far are \textit{Art} and \textit{Music \& Performing Arts}. The category with the most viewers watching per stream is \textit{Food \& Drink}, likely because there are fewer streams to choose from relative to the number of interested viewers. These communities are small relative to the most popular games; for example, the game Fortnite has between 5,000 and 10,000 streams live on Twitch at any given time, with around 100,000 total viewers watching. %\xxx{xxx says move earlier but where?}
+\autoref{table:livestream_summary} shows overall metrics for the creative categories on Twitch. The most popular categories by far are \textit{Art} and \textit{Music \& Performing Arts}. The category with the most viewers watching per stream is \textit{Food \& Drink}, likely because there are fewer streams to choose from relative to the number of interested viewers. These communities are small relative to the most popular games; for example, the game Fortnite has between 5,000 and 10,000 streams live on Twitch at any given time, with around 100,000 total viewers watching. %\xxx{xxx says move earlier but where?}
 
 \begin{table}[b!]
-\vspace{-0.1in}
 \centering
-\resizebox{1\columnwidth}{!}{
+\caption{Creative activities shown in a random sample of 29 livestreams from Twitch's creative categories, and the primary type of structure each stream exhibits.}~\label{table:livestream_activities}
 \begin{tabular}{lll}
 \textbf{Category}        & \textbf{Activity (\# videos if \textgreater 1)} & \textbf{\begin{tabular}[t]{@{}l@{}}Primary type\\ of stream\end{tabular}} \\
 Art                      & Multimedia production                           & Making                                                                    \\
@@ -82,19 +78,16 @@ Science \& Technology    & Building a computer                             & Mak
                          & Game development (2)                            & Teaching                                                                  \\
                          & Talking about technology                        & Socializing                                                              
 \end{tabular}
-}
-\caption{Creative activities shown in a random sample of 29 livestreams from Twitch's creative categories, and the primary type of structure each stream exhibits.}~\label{table:activities}
-\vspace{-0.15in}
 \end{table}
 
-The videos span a range of creative activities (\autoref{table:activities}). The average video length was 3h46m, not including time spent gaming -- a few artists combined both creative work and video gaming into one stream, spending the first part on creative work then switching to gaming when they were finished. The shortest video was 1h3m; the longest was 7h56m. These videos are notably longer than most non-livestream videos.
+The videos span a range of creative activities (\autoref{table:livestream_activities}). The average video length was 3h46m, not including time spent gaming -- a few artists combined both creative work and video gaming into one stream, spending the first part on creative work then switching to gaming when they were finished. The shortest video was 1h3m; the longest was 7h56m. These videos are notably longer than most non-livestream videos.
 
 Almost all videos contained either a screencast view for work being done on a computer (13/29) or a camera view for physical work (15/29). One showed a distant camera view of the artist producing music in a studio. Most (26/29) showed the artist's face: in 10 as part of the main camera feed, and 16 as a separate feed overlaid in a corner (as in \autoref{fig:livestreaming_view}). Almost all artists (27/29) talked out loud while streaming; of the two silent streamers, one occasionally posted in the chat. Most artists talked about a mix of their work and other topics (18/29). Some talked only about their work (9), or only about other topics (1). One was a variety show, so the talking \textit{was} the work. Many videos (19/29) included background music. 
 
 Most artists engaged with the chat at least sometimes (24/29). 18 artists engaged frequently with the chat, and 6 occasionally. Three videos did not show a chat replay despite the artist referring to the chat; we assume it was not saved or had been hidden. In all 26 remaining videos, viewers asked questions at least occasionally, or in some videos (9/26) frequently. In half of these videos, all chat questions appeared to get answered; in the rest, some (7/13) or many (4/13) questions went unanswered. In 2 videos, most chat questions were answered by other viewers or moderators in the chat.
 
 \subsubsection{Four common types of creative livestreams}
-We identified four common types of creative livestreams. We also observed these in interviews with streamers in the next section. Sj{\"{o}}blom \textit{et al.} \cite{Sjoblom2017a} offer a similar characterization of video game livestreams; we found some key differences and fewer overall types of structures. \autoref{table:activities} shows the primary type of each stream in our sample set. These are general high-level trends; some streams bridge multiple types.
+We identified four common types of creative livestreams. We also observed these in interviews with streamers in the next section. Sj{\"{o}}blom \textit{et al.} \cite{Sjoblom2017a} offer a similar characterization of video game livestreams; we found some key differences and fewer overall types of structures. \autoref{table:livestream_activities} shows the primary type of each stream in our sample set. These are general high-level trends; some streams bridge multiple types.
 
 \textbf{Teaching} streams have an instructional focus, where the stream\-er is educating the viewers. These include step-by-step how-to demonstrations of tasks such as cooking a recipe, producing a photo-editing effect, or creating DIY costumes. Other examples include critiquing others' work, answering viewers' questions, or explaining a topic.
 
